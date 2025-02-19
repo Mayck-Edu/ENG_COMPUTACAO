@@ -20,10 +20,10 @@ int main() {
 
     printf("Selecione o operador: \n");
     
-    printf("1 Adicao\n");
-    printf("2 Subtracao\n");
-    printf("3 Multiplicacao\n");
-    printf("4 Divisao\n");
+    printf("1: Adicao\n");
+    printf("2: Subtracao\n");
+    printf("3: Multiplicacao\n");
+    printf("4: Divisao\n");
 
     scanf_s("%d", &operador);
 
