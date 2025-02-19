@@ -1,16 +1,21 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+#include <locale.h>
 
 //aprendendo C e aprimorando a logica
 int main() {
+    setlocale(LC_ALL, "Portuguese");
+	printf("Utilizando caracteres e acentuação da língua portuguesa!\n\n");
+    printf("Localidade corrente: %s\n", setlocale(LC_ALL, NULL));
+
     float num1, num2, resultado;
     int operador;
 
-    printf("Digite o primeiro numero: \n");
+    printf("Digite o primeiro número: \n");
     scanf_s("%f", &num1);
     
-    printf("Digite o segundo numero: \n");
+    printf("Digite o segundo número: \n");
     scanf_s("%f", &num2);
 
     printf("Selecione o operador: \n");
@@ -44,6 +49,5 @@ int main() {
     default:
         printf("Algo nao esta correto... tente de novo!");
         break;
-    }
-        
+    };     
 ;}
