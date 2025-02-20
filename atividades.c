@@ -2,13 +2,12 @@
 #include <locale.h>
 
 main() {
-	
 	setlocale(LC_ALL, "Portuguese");
 
-	
 	printf("Selecione o prejeto: \n");
 	printf("1: IDADES \n");
-	printf("2: MÉDIA DAS NOTAS: \n");
+	printf("2: MÉDIA DAS NOTAS \n");
+	printf("3: SAIR \n");
 	int escolha;
 	scanf_s("%d", &escolha);
 
@@ -16,12 +15,18 @@ main() {
 	{
 	case 1:
 		idade();
-		break;
+		main();
+		return;
 	case 2:
 		media();
+		main();
+		return;
+	case 3:
 		break;
 	default:
-		break;
+		printf("Faça sua escolha!!");
+		main();
+		return;
 	}
 }
 
@@ -32,48 +37,47 @@ idade() {
 
 	if (idade <= 12)
 	{
-		printf("Você é uma criança");
+		printf("Você é uma criança\n\n");
 	}
 	else if (idade <= 19)
 	{
-		printf("Você é uma adolescente");
+		printf("Você é um adolescente\n\n");
 	}
 	else if (idade <= 60)
 	{
-		printf("Você é um adulto");
+		printf("Você é um adulto\n\n");
 	}
 	else if (idade > 60)
 	{
-		printf("Você é um idoso");
-	}else if (idade > 0)
+		printf("Você é um idoso\n\n");
+	}
+	else if (idade > 0)
 	{
-		printf("Você nasceu? kkk");
+		printf("Você nasceu? kkk\n\n");
 	}
 	else
 	{
-		printf("Isso não é uma idade");
+		printf("Isso não é uma idade\n\n");
 	}
+	return;
 }
 
 media() {
 	printf("\n\n\Digite suas duas notas: \n");
 	float nota01, nota02, media;
 
-
 	scanf_s("%f%f", &nota01, &nota02);
 
-	media = (nota01 + nota02)/2;
-	
+	media = (nota01 + nota02) / 2;
+
 	printf("Sua média é: %.2f", media);
 
 	if (media > 7)
 	{
-		printf("APROVADO");
+		printf(", APROVADO\n\n");
 	}
 	else if (media < 4) {
-		printf("REPROVADO, sem possibilidade de recuperação");
+		printf(", REPROVADO, sem possibilidade de recuperação\n\n");
 	}
-
-
+	return;
 }
-
