@@ -4,7 +4,7 @@
 main() {
 	setlocale(LC_ALL, "Portuguese");
 
-	printf("Selecione o prejeto: \n");
+	printf("\nSelecione o prejeto: \n");
 	printf("1: IDADES \n");
 	printf("2: MÉDIA DAS NOTAS \n");
 	printf("3: SAIR \n");
@@ -24,7 +24,7 @@ main() {
 	case 3:
 		break;
 	default:
-		printf("Faça sua escolha!!");
+		printf("Faça sua escolha!!\n\n");
 		main();
 		return;
 	}
@@ -37,23 +37,23 @@ idade() {
 
 	if (idade <= 12)
 	{
-		printf("Você é uma criança\n\n");
+		printf("Você é uma criança.\n\n");
 	}
 	else if (idade <= 19)
 	{
-		printf("Você é um adolescente\n\n");
+		printf("Você é um adolescente.\n\n");
 	}
 	else if (idade <= 60)
 	{
-		printf("Você é um adulto\n\n");
+		printf("Você é um adulto.\n\n");
 	}
 	else if (idade > 60)
 	{
-		printf("Você é um idoso\n\n");
+		printf("Você é um idoso.\n\n");
 	}
-	else if (idade > 0)
+	else if (idade >= 0)
 	{
-		printf("Você nasceu? kkk\n\n");
+		printf("Ops...\n\n");
 	}
 	else
 	{
@@ -74,10 +74,12 @@ media() {
 
 	if (media > 7)
 	{
-		printf(", APROVADO\n\n");
+		printf(" - APROVADO\n\n");
 	}
 	else if (media < 4) {
-		printf(", REPROVADO, sem possibilidade de recuperação\n\n");
+		printf(" - REPROVADO, sem possibilidade de recuperação\n\n");
 	}
 	return;
 }
+               
+
